@@ -9,6 +9,7 @@ services:
       - ${TESSERACT_OCR_DATA_FOLDER:-/usr/share/tessdata}:/usr/share/tessdata
     environment:
       SECURITY_ENABLELOGIN: true
+      LANGS: pt_BR
     restart: unless-stopped
     networks:
       external:
