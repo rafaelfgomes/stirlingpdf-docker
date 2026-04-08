@@ -1,14 +1,13 @@
 services:
   stirling-pdf:
-    image: stirlingtools/stirling-pdf:${STIRLING_PDF_VERSION:-latest}
+    image: stirlingtools/stirling-pdf:latest-fat
     container_name: stirling-pdf
     volumes:
       - ${STIRLING_CONFIG_FOLDER:-./configs}:/configs
       - ${STIRLING_LOGS_FOLDER:-./logs}:/logs
       - ${TESSERACT_OCR_DATA_FOLDER:-/usr/share/tessdata}:/usr/share/tessdata
     environment:
-      - SECURITY_ENABLELOGIN=true    # Set true to enable user authentication
-      - LANGS=pt_BR
+      SECURITY_ENABLELOGIN: true
     restart: unless-stopped
     networks:
       external:
