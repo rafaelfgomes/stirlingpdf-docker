@@ -5,6 +5,7 @@ services:
     volumes:
       - ${STIRLING_CONFIG_FOLDER:-./configs}:/configs
       - ${STIRLING_LOGS_FOLDER:-./logs}:/logs
+      - ${STIRLING_PIPELINE_FOLDER:-./pipeline}:/pipeline
       - ${TESSERACT_OCR_DATA_FOLDER:-/usr/share/tessdata}:/usr/share/tessdata
     environment:
       SECURITY_ENABLELOGIN: true
