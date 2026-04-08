@@ -12,6 +12,7 @@ services:
       SECURITY_INITIALLOGIN_USERNAME: admin
       SECURITY_INITIALLOGIN_PASSWORD: passwd
       LANGS: pt_BR
+      SYSTEM_DEFAULTLOCALE: pt-BR
     restart: unless-stopped
     networks:
       external:
